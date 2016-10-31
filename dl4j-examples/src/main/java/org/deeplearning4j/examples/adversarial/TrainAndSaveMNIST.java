@@ -24,10 +24,10 @@ import org.slf4j.LoggerFactory;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 
-//import org.deeplearning4j.nn.conf.LearningRatePolicy;
-
 /**
- * Created by agibsonccc on 9/16/15.
+ * Created by Kamal Kamalaldin on 10/30/2016.
+ *
+ * The training code is taken from the convolution/LenetMnistExample.java file.
  */
 public class TrainAndSaveMNIST {
     private static final Logger log = LoggerFactory.getLogger(TrainAndSaveMNIST.class);
@@ -122,7 +122,9 @@ public class TrainAndSaveMNIST {
             mnistTest.reset();
         }
         log.info("****************Example finished********************");
-        System.out.println("Savinga and serializing the network");
+
+
+        System.out.println("Serializing and saving the network");
         // Write to disk with FileOutputStream
         FileOutputStream f_out = new FileOutputStream("network.data");
 
@@ -131,5 +133,7 @@ public class TrainAndSaveMNIST {
 
         // Write object out to disk
         obj_out.writeObject ( model );
+
+        System.out.println("Saving done!");
     }
 }

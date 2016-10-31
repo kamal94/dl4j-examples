@@ -13,10 +13,10 @@ import org.slf4j.LoggerFactory;
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 
-//import org.deeplearning4j.nn.conf.LearningRatePolicy;
 
 /**
- * Created by agibsonccc on 9/16/15.
+ * Created by Kamal Kamalaldin on 10/30/2016.
+ * The network testing code is taken from the convolution/LenetMnistExample.java.
  */
 public class LoadMNISTNetwork {
     private static final Logger log = LoggerFactory.getLogger(TrainAndSaveMNIST.class);
@@ -46,12 +46,17 @@ public class LoadMNISTNetwork {
         MultiLayerNetwork model = null;
         if (obj instanceof MultiLayerNetwork)
         {
-            // Cast object to a Vector
+            // Cast object to a a neural network object
             model = (MultiLayerNetwork) obj;
-            // Do something with vector....
+            System.out.println("Retrieval successful");
+        }
+        else
+        {
+            System.out.println("The file provided does not contain an object of type"+
+                "MultiLayerNetwork");
+            return;
         }
 
-        System.out.println("Retrieval successful: " + model.toString());
 
         log.info("Train model....");
         model.setListeners(new ScoreIterationListener(1));
