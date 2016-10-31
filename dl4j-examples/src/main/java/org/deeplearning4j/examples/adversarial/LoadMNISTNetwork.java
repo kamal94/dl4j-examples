@@ -1,4 +1,4 @@
-package org.deeplearning4j.examples.convolution;
+package org.deeplearning4j.examples.adversarial;
 
 import org.deeplearning4j.datasets.iterator.impl.MnistDataSetIterator;
 import org.deeplearning4j.eval.Evaluation;
@@ -18,8 +18,8 @@ import java.io.ObjectInputStream;
 /**
  * Created by agibsonccc on 9/16/15.
  */
-public class test {
-    private static final Logger log = LoggerFactory.getLogger(LenetMnistExample.class);
+public class LoadMNISTNetwork {
+    private static final Logger log = LoggerFactory.getLogger(TrainAndSaveMNIST.class);
 
     public static void main(String[] args) throws Exception {
         int batchSize = 64;

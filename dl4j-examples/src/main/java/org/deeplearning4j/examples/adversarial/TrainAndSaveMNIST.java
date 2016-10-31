@@ -1,4 +1,4 @@
-package org.deeplearning4j.examples.convolution;
+package org.deeplearning4j.examples.adversarial;
 
 import org.deeplearning4j.datasets.iterator.impl.MnistDataSetIterator;
 import org.deeplearning4j.eval.Evaluation;
@@ -29,8 +29,8 @@ import java.io.ObjectOutputStream;
 /**
  * Created by agibsonccc on 9/16/15.
  */
-public class LenetMnistExample {
-    private static final Logger log = LoggerFactory.getLogger(LenetMnistExample.class);
+public class TrainAndSaveMNIST {
+    private static final Logger log = LoggerFactory.getLogger(TrainAndSaveMNIST.class);
 
     public static void main(String[] args) throws Exception {
         int nChannels = 1;
