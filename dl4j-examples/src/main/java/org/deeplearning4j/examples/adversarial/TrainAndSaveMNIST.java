@@ -124,7 +124,7 @@ public class TrainAndSaveMNIST {
         log.info("****************Example finished********************");
 
 
-        System.out.println("Serializing and saving the network");
+        log.info("Serializing and saving the network");
         // Write to disk with FileOutputStream
         FileOutputStream f_out = new FileOutputStream("network.data");
 
@@ -134,6 +134,6 @@ public class TrainAndSaveMNIST {
         // Write object out to disk
         obj_out.writeObject ( model );
 
-        System.out.println("Saving done!");
+        log.info("Saving done!");
     }
 }
